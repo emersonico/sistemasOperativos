@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <ctype.h>
+
+
+int esMinuscula(char caracter)
+{
+    
+    // Verifica si en la tabla ASCII la variable esta entre los valroes de las minusculas
+    
+    if (caracter >= 'a' && caracter <= 'z') 
+    {
+        return 1;  // si es minuscula retornará uno
+    } 
+    else 
+    {
+        return 0;
+    }
+}
+
+int main()
+{
+   char caracter;
+   printf("Ingrese el caracter:");
+   scanf("%c", &caracter);
+   
+   // se llama a la  funcion
+   
+   if (esMinuscula(caracter))
+   {
+       printf("%c es una letra minuscula. \n", caracter);
+   }else{
+       printf("%c no es una letra minuscula. \n", caracter);
+   }
+   
+   return 0;
+}

@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <ctype.h>
+
+
+int esMayuscula(char caracter)
+{
+    
+    // Verifica si en la tabla ASCII la variable esta entre los valroes de las mayusculas
+    
+    if (caracter >= 'A' && caracter <= 'Z') 
+    {
+        return 1;  // si es mayúscula retornará uno
+    } 
+    else 
+    {
+        return 0;
+    }
+}
+
+int main()
+{
+   char caracter;
+   printf("Ingrese el caracter:");
+   scanf("%c", &caracter);
+   
+   // se llama a la  funcion
+   
+   if (esMayuscula(caracter))
+   {
+       printf("%c es una letra mayúscula. \n", caracter);
+   }else{
+       printf("%c no es una letra mayúscula. \n", caracter);
+   }
+   
+   return 0;
+}
